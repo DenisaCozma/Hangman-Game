@@ -1,0 +1,71 @@
+<Window x:Class="Spanzuratoare.Views.Statistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statistics"
+        Height="400" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FFB8ACFA" >
+
+        <Border Background="#FFB8ACFA" CornerRadius="12" Padding="10">
+
+            <DataGrid ItemsSource="{Binding Stats}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      BorderThickness="0"
+                      GridLinesVisibility="None"
+                      HeadersVisibility="Column">
+				
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#FF6D4ED9"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="Background" Value="#FFEDE9FF"/>
+                        <Setter Property="Margin" Value="0,2,0,2"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="DataGridRow">
+                                    <Border Background="{TemplateBinding Background}"
+                                            CornerRadius="8"
+                                            Padding="5">
+                                        <DataGridCellsPresenter/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="User"
+                                        Binding="{Binding UserName}"
+                                        Width="*"/>
+
+                    <DataGridTextColumn Header="Category"
+                                        Binding="{Binding Category}"
+                                        Width="*"/>
+
+                    <DataGridTextColumn Header="Games"
+                                        Binding="{Binding Games}"
+                                        Width="*"/>
+
+                    <DataGridTextColumn Header="Wins"
+                                        Binding="{Binding Wins}"
+                                        Width="*"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Border>
+
+    </Grid>
+</Window>

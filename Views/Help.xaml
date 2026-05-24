@@ -1,0 +1,22 @@
+<Window x:Class="Spanzuratoare.Views.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Spanzuratoare.ViewModels"
+        Title="Help" Height="180" Width="260"
+        WindowStartupLocation="CenterScreen">
+
+<Grid Background="#FFB8ACFA">
+        <StackPanel>
+
+            <TextBlock Text="Student:" FontWeight="Bold"/>
+            <TextBlock Text="Denisa Cozma" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Grupa:" FontWeight="Bold"/>
+            <TextBlock Text="10LF341" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Specializare" FontWeight="Bold"/>
+            <TextBlock Text="Informatica Aplicata"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

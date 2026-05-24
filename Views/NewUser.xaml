@@ -1,0 +1,76 @@
+<Window x:Class="Spanzuratoare.Views.NewUser" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:vm="clr-namespace:Spanzuratoare.ViewModels" 
+        Title="NewUser" Height="450" Width="450">
+    <Grid Background="#FFB8ACFA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- POZE + NAV -->
+        <Grid Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!-- PREV -->
+            <Button Content="&lt;&lt;" Command="{Binding PrevCommand}" Width="60" Height="40" Margin="5" Background="#FF6D4ED9" Foreground="White" FontWeight="SemiBold" FontSize="16" BorderThickness="0" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <!-- IMAGE -->
+            <Image Source="{Binding CurrentPicture}" Grid.Column="1" Width="230" Height="230" Stretch="Uniform"/>
+            <!-- NEXT -->
+            <Button Grid.Column="2" Content="&gt;&gt;" Command="{Binding NextCommand}" Width="60" Height="40" Margin="5" Background="#FF6D4ED9" Foreground="White" FontWeight="SemiBold" FontSize="16" BorderThickness="0" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0,10,0,5">
+
+            <!-- LABEL -->
+
+            <!-- INPUT -->
+            <!-- LABEL -->
+            <TextBlock Text="Username"
+               FontSize="20"
+               FontWeight="Bold"
+               Foreground="#FF250F58"
+               />
+
+            <!-- INPUT -->
+            <TextBox Text="{Binding NewUser.Name, UpdateSourceTrigger=PropertyChanged}"
+             Width="250"
+             Height="45"/>
+
+        </StackPanel>
+
+        <Button Grid.Row="2" Content="Save" Command="{Binding SaveCommand}" Width="120" Height="40" HorizontalAlignment="Center" Margin="0,10,0,20" Background="#FF6D4ED9" Foreground="White" FontWeight="Bold" FontSize="16" BorderThickness="0" Cursor="Hand">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="12">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Background" Value="#FF8C76D9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

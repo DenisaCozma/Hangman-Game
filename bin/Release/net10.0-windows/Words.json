@@ -1,0 +1,56 @@
+{
+  "Movies": [
+    "INTERSTELLAR",
+    "TITANIC",
+    "AVATAR",
+    "GLADIATOR",
+    "PROJECT HAIL MARY",
+    "JUJUTSU KAISEN",
+    "PRIDE AND PREJUDICE"
+  ],
+  "Music": [
+    "TAYLOR SWIFT",
+    "SABRINA CARPENTER",
+    "ARIANA GRANDE",
+    "ED SHEERAN",
+    "JUSTIN BIEBER",
+    "BILLIE EILISH"
+  ],
+  "Animals": [
+    "FOX TERRIER",
+    "ELEPHANT",
+    "GIRAFFE",
+    "KANGAROO",
+    "DOLPHIN",
+    "PENGUIN",
+    "ZEBRA"
+  ],
+  "Characters": [
+    "HARRY POTTER",
+    "SPIDERMAN",
+    "BATMAN",
+    "SHERLOCK HOLMES",
+    "JAMES BOND",
+    "ANNE SHIRLEY",
+    "SATORU GOJO"
+  ],
+  "Countries": [
+    "ROMANIA",
+    "FRANCE",
+    "GERMANY",
+    "ITALY",
+    "SPAIN",
+    "UNITED KINGDOM",
+    "UNITED STATES",
+    "CANADA"
+  ],
+  "Games": [
+    "MINECRAFT",
+    "FORTNITE",
+    "VALORANT",
+    "AGE OF EMPIRES",
+    "STARDEW VALLEY",
+    "STARCRAFT",
+    "TERRARIA"
+  ]
+}
